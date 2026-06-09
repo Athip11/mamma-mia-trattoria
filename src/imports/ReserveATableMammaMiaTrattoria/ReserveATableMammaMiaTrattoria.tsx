@@ -160,7 +160,7 @@ function ElegantItalianDiningRoom() {
     <div className="h-[511.66px] relative shrink-0 w-full" data-name="Elegant Italian dining room">
       <div aria-hidden className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 overflow-hidden">
-          <img alt="" className="absolute h-full left-[-12.5%] max-w-none top-0 w-[125%]" src={imgElegantItalianDiningRoom} />
+          <img alt="Elegant Italian dining room set for table service" className="absolute h-full left-[-12.5%] max-w-none top-0 w-[125%]" src={imgElegantItalianDiningRoom} />
         </div>
         <div className="absolute bg-[rgba(255,255,255,0.2)] inset-0 mix-blend-saturation" />
       </div>

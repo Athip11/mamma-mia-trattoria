@@ -209,3 +209,99 @@ footer h3[class*="EB_Garamond"] {
 ::after {
   border-radius: 0 !important;
 }
+
+.mamma-mobile-cta-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  padding: 12px 16px calc(14px + env(safe-area-inset-bottom));
+  pointer-events: none;
+}
+
+.mamma-mobile-cta-panel {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  box-sizing: border-box;
+  width: calc(100vw - 32px);
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 8px;
+  border: 1px solid #9c7a3e;
+  border-radius: 14px !important;
+  background: rgba(252, 248, 247, 0.94);
+  box-shadow: 0 -10px 30px rgba(94, 95, 91, 0.16);
+  backdrop-filter: blur(10px);
+  pointer-events: auto;
+}
+
+.mamma-mobile-cta-link {
+  display: flex;
+  min-width: 0;
+  min-height: 56px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 9px 6px;
+  border: 1px solid #9c7a3e;
+  border-radius: 10px !important;
+  background: #c7a66a;
+  color: #241c16;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: 0 7px 18px rgba(156, 122, 62, 0.22);
+  transition:
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    color 0.15s ease-in-out,
+    transform 0.15s ease-in-out;
+}
+
+.mamma-mobile-cta-link:hover {
+  background: #b89660;
+  border-color: #9c7a3e;
+}
+
+.mamma-mobile-cta-link:active {
+  transform: translateY(1px);
+}
+
+.mamma-mobile-cta-link.is-active {
+  background: #9c7a3e;
+  border-color: #9c7a3e;
+  color: #ffffff;
+}
+
+.mamma-mobile-cta-link.is-call {
+  background: rgba(252, 248, 247, 0.72);
+  border-color: #9c7a3e;
+  color: #5e5f5b;
+}
+
+.mamma-mobile-cta-link.is-call:hover {
+  background: #f7f1e7;
+  border-color: #9c7a3e;
+  color: #241c16;
+}
+
+.mamma-mobile-cta-link.is-reserve {
+  background: #c7a66a;
+  border-color: #9c7a3e;
+  color: #241c16;
+}
+
+.mamma-mobile-cta-link.is-reserve:hover {
+  background: #b89660;
+}
+
+.mamma-mobile-cta-link.is-reserve.is-active {
+  background: #9c7a3e;
+  color: #ffffff;
+}

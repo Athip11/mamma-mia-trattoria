@@ -325,7 +325,7 @@ function FreshItalianIngredients() {
   return (
     <div className="h-[600px] pointer-events-none relative rounded-[4px] shrink-0 w-full" data-name="Fresh Italian ingredients">
       <div className="absolute inset-0 overflow-hidden rounded-[4px]">
-        <img alt="" className="absolute h-full left-[-9.52%] max-w-none top-0 w-[119.05%]" src={imgFreshItalianIngredients} />
+        <img alt="Fresh Italian ingredients arranged for cooking" className="absolute h-full left-[-9.52%] max-w-none top-0 w-[119.05%]" src={imgFreshItalianIngredients} />
       </div>
       <div aria-hidden className="absolute border border-[#e5e2e0] border-solid inset-0 rounded-[4px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)]" />
     </div>

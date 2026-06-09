@@ -1,17 +1,19 @@
 import { Link, useLocation } from 'react-router';
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
 
 export default function Header() {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const isActive = (path: string) => location.pathname === path;
-  const mobileActionClass = (path: string) =>
-    `flex-1 px-4 py-3 text-center font-['Inter'] text-[12px] tracking-[1.2px] transition-all duration-150 active:translate-y-px ${
+  const mobileActionClass = (path?: string) =>
+    `mamma-mobile-cta-link${path && isActive(path) ? ' is-active' : ''}`;
+
+  const desktopActionClass = (path: string) =>
+    `flex items-center justify-center px-5 py-2 border font-['Inter'] text-[12px] tracking-[1.2px] leading-[14.4px] transition-all duration-150 active:translate-y-px ${
       isActive(path)
         ? 'bg-[#9c7a3e] text-white hover:bg-[#8b6c37] active:bg-[#765b2f]'
-        : 'bg-[#c7a66a] text-[#241c16] hover:bg-[#b89660] active:bg-[#9c7a3e] active:text-white'
+        : 'bg-[#c7a66a] border-[#9c7a3e] text-white hover:bg-[#b89660] active:bg-[#9c7a3e]'
     }`;
 
   const navLinks = [
@@ -28,11 +30,18 @@ export default function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 backdrop-blur-[6px] bg-[rgba(252,248,247,0.8)] border-b border-[rgba(94,95,91,0.1)]">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:bg-[#fcf8f7] focus:px-4 focus:py-3 focus:font-['Inter'] focus:text-[12px] focus:tracking-[1.2px] focus:text-[#5e5f5b] focus:shadow-lg focus:outline focus:outline-2 focus:outline-[#9c7a3e]"
+      >
+        Skip to main content
+      </a>
+
+      <header className="sticky top-0 z-50 backdrop-blur-[3px] bg-[rgba(252,248,247,0.68)] border-b border-[rgba(94,95,91,0.08)]">
         <div className="max-w-[1200px] mx-auto px-4 sm:px-8 lg:px-16">
-          <div className="flex items-center justify-between py-4">
+          <div className="flex items-center justify-between gap-3 py-2.5 sm:py-3 lg:py-4">
             {/* Logo */}
-            <Link to="/" className="font-['EB_Garamond'] text-[#5e5f5b] text-xl sm:text-2xl lg:text-[32px] tracking-[-0.8px] leading-[41.6px]">
+            <Link to="/" className="min-w-0 truncate font-['EB_Garamond'] text-[#5e5f5b] text-xl sm:text-2xl lg:text-[32px] tracking-[-0.8px] leading-tight lg:leading-[41.6px]">
               Mamma Mia Trattoria
             </Link>
 
@@ -58,11 +67,7 @@ export default function Header() {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`flex items-center justify-center px-5 py-2 border font-['Inter'] text-[12px] tracking-[1.2px] leading-[14.4px] transition-all duration-150 active:translate-y-px ${
-                    isActive(link.path)
-                      ? 'bg-[#9c7a3e] border-[#9c7a3e] text-white hover:bg-[#8b6c37] active:bg-[#765b2f]'
-                      : 'bg-[#c7a66a] border-[#9c7a3e] text-white hover:bg-[#b89660] active:bg-[#9c7a3e]'
-                  }`}
+                  className={desktopActionClass(link.path)}
                 >
                   {link.label}
                 </Link>
@@ -72,22 +77,38 @@ export default function Header() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 text-[#5e5f5b] transition-all duration-150 hover:bg-[#f7f1e7] active:translate-y-px active:bg-[#eadfcf]"
+              className="mr-3 flex min-h-12 min-w-12 shrink-0 items-center justify-center p-2 text-[#5e5f5b] transition-all duration-150 hover:bg-[#f7f1e7] active:translate-y-px active:bg-[#eadfcf] lg:hidden"
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              <span className="relative block h-5 w-5" aria-hidden="true">
+                <span
+                  className={`absolute left-0 top-[3px] h-px w-5 bg-current transition-transform duration-150 ${
+                    mobileMenuOpen ? 'translate-y-[7px] rotate-45' : ''
+                  }`}
+                />
+                <span
+                  className={`absolute left-0 top-[10px] h-px w-5 bg-current transition-opacity duration-150 ${
+                    mobileMenuOpen ? 'opacity-0' : ''
+                  }`}
+                />
+                <span
+                  className={`absolute left-0 top-[17px] h-px w-5 bg-current transition-transform duration-150 ${
+                    mobileMenuOpen ? '-translate-y-[7px] -rotate-45' : ''
+                  }`}
+                />
+              </span>
             </button>
           </div>
 
           {/* Mobile Navigation */}
           {mobileMenuOpen && (
-            <nav className="lg:hidden pb-4 space-y-4">
+            <nav className="lg:hidden pb-4 space-y-2">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`block font-['Inter'] text-[14px] tracking-[1.2px] py-2 ${
+                  className={`flex min-h-12 items-center font-['Inter'] text-[14px] tracking-[1.2px] py-3 ${
                     isActive(link.path)
                       ? 'text-[#5e5f5b] border-l-2 border-[#5e5f5b] pl-4'
                       : 'text-[#464742] pl-4 hover:text-[#5e5f5b]'
@@ -96,34 +117,18 @@ export default function Header() {
                   {link.label}
                 </Link>
               ))}
-              <div className="flex gap-3 pt-2">
-                {ctaLinks.map((link) => (
-                  <Link
-                    key={link.path}
-                    to={link.path}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className={`flex-1 px-4 py-3 border text-center font-['Inter'] text-[12px] tracking-[1.2px] transition-all duration-150 active:translate-y-px ${
-                      isActive(link.path)
-                        ? 'bg-[#9c7a3e] border-[#9c7a3e] text-white hover:bg-[#8b6c37] active:bg-[#765b2f]'
-                        : 'bg-[#c7a66a] border-[#9c7a3e] text-white hover:bg-[#b89660] active:bg-[#9c7a3e]'
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
             </nav>
           )}
         </div>
       </header>
 
-      <nav className="fixed inset-x-0 bottom-0 z-50 lg:hidden border-t border-[#9c7a3e] bg-[#fcf8f7] px-3 pt-2 pb-[calc(env(safe-area-inset-bottom)+0.5rem)] shadow-[0_-8px_24px_rgba(94,95,91,0.12)]">
-        <div className="max-w-md mx-auto flex gap-2">
-          <Link to="/order" className={mobileActionClass('/order')}>
-            ORDER
-          </Link>
-          <Link to="/reservations" className={mobileActionClass('/reservations')}>
-            TABLE RESERVE
+      <nav className="mamma-mobile-cta-bar lg:hidden" aria-label="Quick actions">
+        <div className="mamma-mobile-cta-panel">
+          <a href="tel:5551234567" className={`${mobileActionClass()} is-call`}>
+            <span>CALL</span>
+          </a>
+          <Link to="/reservations" className={`${mobileActionClass('/reservations')} is-reserve`}>
+            <span>RESERVE</span>
           </Link>
         </div>
       </nav>

@@ -181,7 +181,7 @@ function Ab6AXuDfxfzjyhel4KpMnM4LlTwFcU1VPnUy3ZcH6DnpnvDs90S8HuDtoRtQxlrUpXLtx13
   return (
     <div className="absolute inset-0 opacity-30" data-name="AB6AXuDfxfzjyhel4kpMnM4llTwFcU1VPnUY3zcH6DNPNVDs90S8huDTORtQXLRUpX_LTX13VSrG01CkgQa3E7IQII7xkczsY3fbSf0W99Ag_bKR6A5dpAVSSHhCDfqbrhrFxcZG6zZn9CKbGPOFpLpRy0HHKhekrfk1s3J5QzHD3O6NUqmh-ulH4B3WkS9_Rc0eOedy6f9sQyXM0KnfoXQcaIsgJBNf3wV6ScwZjWhQU3NYz2ZLj3vOEEJ_ElrsJpEKTrq4Ky3v_kWLtuY">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <img alt="" className="absolute h-[147.13%] left-0 max-w-none top-[-23.56%] w-full" src={imgAb6AXuDfxfzjyhel4KpMnM4LlTwFcU1VPnUy3ZcH6DnpnvDs90S8HuDtoRtQxlrUpXLtx13VSrG01CkgQa3E7Iqii7XkczsY3FbSf0W99AgBKr6A5DpAvssHhCDfqbrhrFxcZg6ZZn9CKbGpoFpLpRy0HhKhekrfk1S3J5QzHd3O6NUqmhUlH4B3WkS9Rc0EOedy6F9SQyXm0KnfoXQcaIsgJbNf3WV6ScwZjWhQu3NYz2ZLj3VOeejElrsJpEkTrq4Ky3VKWLtuY} />
+        <img alt="Freshly prepared Italian pasta and table dishes" className="absolute h-[147.13%] left-0 max-w-none top-[-23.56%] w-full" src={imgAb6AXuDfxfzjyhel4KpMnM4LlTwFcU1VPnUy3ZcH6DnpnvDs90S8HuDtoRtQxlrUpXLtx13VSrG01CkgQa3E7Iqii7XkczsY3FbSf0W99AgBKr6A5DpAvssHhCDfqbrhrFxcZg6ZZn9CKbGpoFpLpRy0HhKhekrfk1S3J5QzHd3O6NUqmhUlH4B3WkS9Rc0EOedy6F9SQyXm0KnfoXQcaIsgJbNf3WV6ScwZjWhQu3NYz2ZLj3VOeejElrsJpEkTrq4Ky3VKWLtuY} />
       </div>
     </div>
   );
@@ -331,7 +331,7 @@ function Ab6AXuBrDy5O9L1AGm3Y0BjUbwPkM3Qzg4Dl2FQzfkrHwCdLoBu8ZhqtQyWk2Tx9QMq5KYo
   return (
     <div className="h-[500px] pointer-events-none relative rounded-[2px] shrink-0 w-full" data-name="AB6AXuBrDY5o9L-1AGm3Y0BjUbwPK_m3QZG4Dl2fQzfkrHwCdLoBU8zhqtQyWk2tx9QMq5kYOUhKjfwGTNQqzCQtYiuy01vBaYMBxXtVXpc-cgeFqtWeHOS0Tgk7EVrIMpknYTpriJn0wYmbnNkceFKUr-pQBdJ5i662-MT9oztr0GwxTEFBb4S4qVEG361EqKcPsu9jMrjqJtbUj6xjvfsnXBMB13RH6KWorQfDZvFTZLreZA3eFsfSBejy9MUuW169lCDP13a_VFRIs5s">
       <div className="absolute inset-0 opacity-80 overflow-hidden rounded-[2px]">
-        <img alt="" className="absolute h-[123.07%] left-0 max-w-none top-[-11.53%] w-full" src={imgAb6AXuBrDy5O9L1AGm3Y0BjUbwPkM3Qzg4Dl2FQzfkrHwCdLoBu8ZhqtQyWk2Tx9QMq5KYoUhKjfwGtnQqzCQtYiuy01VBaYmBxXtVXpcCgeFqtWeHos0Tgk7EVrIMpknYTpriJn0WYmbnNkceFkUrPQBdJ5I662Mt9Oztr0GwxTefBb4S4QVeg361EqKcPsu9JMrjqJtbUj6XjvfsnXbmb13Rh6KWorQfDZvFtzLreZa3EFsfSBejy9MUuW169LCdp13AVfrIs5S} />
+        <img alt="Family-style Italian table with pasta and wine" className="absolute h-[123.07%] left-0 max-w-none top-[-11.53%] w-full" src={imgAb6AXuBrDy5O9L1AGm3Y0BjUbwPkM3Qzg4Dl2FQzfkrHwCdLoBu8ZhqtQyWk2Tx9QMq5KYoUhKjfwGtnQqzCQtYiuy01VBaYmBxXtVXpcCgeFqtWeHos0Tgk7EVrIMpknYTpriJn0WYmbnNkceFkUrPQBdJ5I662Mt9Oztr0GwxTefBb4S4QVeg361EqKcPsu9JMrjqJtbUj6XjvfsnXbmb13Rh6KWorQfDZvFtzLreZa3EFsfSBejy9MUuW169LCdp13AVfrIs5S} />
       </div>
       <div aria-hidden className="absolute border border-[#f7f1e7] border-solid inset-0 rounded-[2px] shadow-[0px_12px_32px_0px_rgba(36,28,22,0.04)]" />
     </div>

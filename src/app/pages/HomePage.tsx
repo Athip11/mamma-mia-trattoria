@@ -78,10 +78,10 @@ export default function HomePage() {
     <div className="min-h-screen flex flex-col bg-[#fcf8f7] pb-20 lg:pb-0">
       <Header />
 
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <section className="relative min-h-[78vh] flex items-center overflow-hidden border-b border-[rgba(94,95,91,0.1)]">
           <div className="absolute inset-0">
-            <img src={imgHero} alt="" className="w-full h-full object-cover opacity-30" />
+            <img src={imgHero} alt="" aria-hidden="true" className="w-full h-full object-cover opacity-30" />
             <div className="absolute inset-0 bg-[#fcf8f7]/55"></div>
           </div>
 

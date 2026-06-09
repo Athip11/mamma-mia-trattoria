@@ -758,7 +758,7 @@ function ATopDownViewOfTheLeftHalfOfAClassicMargheritaPizzaWithFreshMozzarellaVi
   return (
     <div className="absolute inset-[0_-99.99%_0_0]" data-name="A top-down view of the left half of a classic Margherita pizza with fresh mozzarella, vibrant red tomato sauce, and green basil leaves, set against a dark rustic background in a premium Italian dining style.">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <img alt="" className="absolute h-full left-0 max-w-none top-0 w-[100.01%]" src={imgATopDownViewOfTheLeftHalfOfAClassicMargheritaPizzaWithFreshMozzarellaVibrantRedTomatoSauceAndGreenBasilLeavesSetAgainstADarkRusticBackgroundInAPremiumItalianDiningStyle} />
+        <img alt="Left half of a Margherita pizza with tomato, mozzarella, and basil" className="absolute h-full left-0 max-w-none top-0 w-[100.01%]" src={imgATopDownViewOfTheLeftHalfOfAClassicMargheritaPizzaWithFreshMozzarellaVibrantRedTomatoSauceAndGreenBasilLeavesSetAgainstADarkRusticBackgroundInAPremiumItalianDiningStyle} />
       </div>
     </div>
   );
@@ -776,7 +776,7 @@ function ATopDownViewOfTheRightHalfOfAGourmetMushroomAndTrufflePizzaFeaturingRoa
   return (
     <div className="absolute inset-[0_0_0_-99.99%]" data-name="A top-down view of the right half of a gourmet mushroom and truffle pizza, featuring roasted mushrooms and melted fontina cheese, styled elegantly for a fine dining aesthetic.">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <img alt="" className="absolute h-full left-0 max-w-none top-0 w-[100.01%]" src={imgATopDownViewOfTheRightHalfOfAGourmetMushroomAndTrufflePizzaFeaturingRoastedMushroomsAndMeltedFontinaCheeseStyledElegantlyForAFineDiningAesthetic} />
+        <img alt="Right half of a mushroom and truffle pizza with melted fontina" className="absolute h-full left-0 max-w-none top-0 w-[100.01%]" src={imgATopDownViewOfTheRightHalfOfAGourmetMushroomAndTrufflePizzaFeaturingRoastedMushroomsAndMeltedFontinaCheeseStyledElegantlyForAFineDiningAesthetic} />
       </div>
     </div>
   );
@@ -861,7 +861,7 @@ function ALargeRusticCeramicDishFilledWithRichCreamyRigatoniAllaVodkaGarnishedWi
   return (
     <div className="flex-[1_0_0] min-h-px relative w-full" data-name="A large, rustic ceramic dish filled with rich, creamy rigatoni alla vodka, garnished with fresh parmesan and parsley, lit to emphasize a warm family-style meal.">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <img alt="" className="absolute h-[155.38%] left-0 max-w-none top-[-27.69%] w-full" src={imgALargeRusticCeramicDishFilledWithRichCreamyRigatoniAllaVodkaGarnishedWithFreshParmesanAndParsleyLitToEmphasizeAWarmFamilyStyleMeal} />
+        <img alt="Rigatoni alla vodka in a rustic ceramic dish" className="absolute h-[155.38%] left-0 max-w-none top-[-27.69%] w-full" src={imgALargeRusticCeramicDishFilledWithRichCreamyRigatoniAllaVodkaGarnishedWithFreshParmesanAndParsleyLitToEmphasizeAWarmFamilyStyleMeal} />
       </div>
     </div>
   );
@@ -952,7 +952,7 @@ function ALargeTrayOfClassicLasagnaAlFornoWithGoldenBakedCheeseOnTopShowingLayer
   return (
     <div className="flex-[1_0_0] min-h-px relative w-full" data-name="A large tray of classic lasagna al forno with golden baked cheese on top, showing layers of pasta and meat ragu, styled in a premium culinary setting.">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <img alt="" className="absolute h-[155.38%] left-0 max-w-none top-[-27.69%] w-full" src={imgALargeTrayOfClassicLasagnaAlFornoWithGoldenBakedCheeseOnTopShowingLayersOfPastaAndMeatRaguStyledInAPremiumCulinarySetting} />
+        <img alt="Tray of lasagna al forno with golden baked cheese" className="absolute h-[155.38%] left-0 max-w-none top-[-27.69%] w-full" src={imgALargeTrayOfClassicLasagnaAlFornoWithGoldenBakedCheeseOnTopShowingLayersOfPastaAndMeatRaguStyledInAPremiumCulinarySetting} />
       </div>
     </div>
   );

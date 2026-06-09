@@ -111,7 +111,7 @@ export default function OrderPage() {
     <div className="min-h-screen flex flex-col bg-[#fcf8f7] pb-20 lg:pb-0">
       <Header />
 
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <section className="py-12 sm:py-16 lg:py-24 border-b border-[rgba(94,95,91,0.1)]">
           <div className="max-w-[1200px] mx-auto px-4 sm:px-8 lg:px-16 text-center">
             <p className="font-['Inter'] text-[#9c7a3e] text-xs tracking-[2.4px] uppercase mb-6">

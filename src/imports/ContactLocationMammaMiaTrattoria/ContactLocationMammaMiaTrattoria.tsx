@@ -269,7 +269,7 @@ function MapShowingLocation() {
   return (
     <div className="flex-[1_0_0] min-h-px opacity-80 relative w-full" data-name="Map showing location">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <img alt="" className="absolute h-[113.97%] left-0 max-w-none top-[-6.99%] w-full" src={imgMapShowingLocation} />
+        <img alt="Map showing the Mamma Mia Trattoria location" className="absolute h-[113.97%] left-0 max-w-none top-[-6.99%] w-full" src={imgMapShowingLocation} />
       </div>
     </div>
   );

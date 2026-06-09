@@ -8,7 +8,7 @@ export default function ContactPage() {
     <div className="min-h-screen flex flex-col bg-[#fcf8f7] pb-20 lg:pb-0">
       <Header />
 
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <section className="py-12 sm:py-16 lg:py-24">
           <div className="max-w-[1200px] mx-auto px-4 sm:px-8 lg:px-16">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6">
