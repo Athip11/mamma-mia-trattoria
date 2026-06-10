@@ -71,16 +71,16 @@ export default function ContactPage() {
                 </div>
 
                 {/* CTA Buttons */}
-                <div className="pt-8 border-t border-[rgba(94,95,91,0.1)] space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row">
+                <div className="pt-8 border-t border-[rgba(94,95,91,0.1)] flex flex-col sm:flex-row gap-4">
                   <Link
                     to="/reservations"
-                    className="px-8 py-3 bg-[#c7a66a] border border-[#9c7a3e] text-[#241c16] font-['Inter'] text-sm tracking-[1.2px] hover:bg-[#b89660] transition-colors text-center"
+                    className="w-full sm:w-auto min-h-[48px] flex items-center justify-center px-8 py-3 bg-[#c7a66a] border border-[#9c7a3e] text-[#241c16] font-['Inter'] text-sm tracking-[1.2px] hover:bg-[#b89660] transition-colors text-center"
                   >
                     Book a Table
                   </Link>
                   <Link
                     to="/menu"
-                    className="px-8 py-3 border border-[#a39d95] text-[#241c16] font-['Inter'] text-sm tracking-[1.2px] hover:bg-white transition-colors text-center"
+                    className="w-full sm:w-auto min-h-[48px] flex items-center justify-center px-8 py-3 border border-[#a39d95] text-[#241c16] font-['Inter'] text-sm tracking-[1.2px] hover:bg-white transition-colors text-center"
                   >
                     View Family Deals
                   </Link>

@@ -37,9 +37,9 @@ export default function Header() {
         Skip to main content
       </a>
 
-      <header className="sticky top-0 z-50 backdrop-blur-[3px] bg-[rgba(252,248,247,0.68)] border-b border-[rgba(94,95,91,0.08)]">
+      <header className="sticky top-0 z-50 backdrop-blur-[8px] bg-[rgba(252,248,247,0.45)] border-b border-[rgba(94,95,91,0.08)]">
         <div className="max-w-[1200px] mx-auto px-4 sm:px-8 lg:px-16">
-          <div className="flex items-center justify-between gap-3 py-2.5 sm:py-3 lg:py-4">
+          <div className="flex items-center justify-between gap-3 py-1.5 sm:py-3 lg:py-4">
             {/* Logo */}
             <Link to="/" className="min-w-0 truncate font-['EB_Garamond'] text-[#5e5f5b] text-xl sm:text-2xl lg:text-[32px] tracking-[-0.8px] leading-tight lg:leading-[41.6px]">
               Mamma Mia Trattoria
@@ -122,16 +122,18 @@ export default function Header() {
         </div>
       </header>
 
-      <nav className="mamma-mobile-cta-bar lg:hidden" aria-label="Quick actions">
-        <div className="mamma-mobile-cta-panel">
-          <a href="tel:5551234567" className={`${mobileActionClass()} is-call`}>
-            <span>CALL</span>
-          </a>
-          <Link to="/reservations" className={`${mobileActionClass('/reservations')} is-reserve`}>
-            <span>RESERVE</span>
-          </Link>
-        </div>
-      </nav>
+      {location.pathname !== '/reservations' && (
+        <nav className="mamma-mobile-cta-bar lg:hidden" aria-label="Quick actions">
+          <div className="mamma-mobile-cta-panel">
+            <a href="tel:5551234567" className={`${mobileActionClass()} is-call`}>
+              <span>CALL</span>
+            </a>
+            <Link to="/reservations" className={`${mobileActionClass('/reservations')} is-reserve`}>
+              <span>RESERVE</span>
+            </Link>
+          </div>
+        </nav>
+      )}
     </>
   );
 }

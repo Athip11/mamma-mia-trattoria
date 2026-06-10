@@ -33,7 +33,7 @@ export default function ReservationsPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#fcf8f7] pb-20 lg:pb-0">
+    <div className="min-h-screen flex flex-col bg-[#fcf8f7] pb-36 lg:pb-0">
       <Header />
 
       <main id="main-content" className="flex-1">
@@ -220,7 +220,7 @@ export default function ReservationsPage() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full px-8 py-4 bg-[#c7a66a] border border-[#9c7a3e] text-white font-['Inter'] text-sm tracking-[1.2px] hover:bg-[#b89660] transition-colors"
+                className="w-full min-h-[48px] flex items-center justify-center px-8 py-4 bg-[#c7a66a] border border-[#9c7a3e] text-white font-['Inter'] text-sm tracking-[1.2px] hover:bg-[#b89660] transition-colors"
               >
                 Reserve Table
               </button>

@@ -54,7 +54,7 @@ export default function MenuPage() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#fcf8f7] pb-20 lg:pb-0">
+    <div className="min-h-screen flex flex-col bg-[#fcf8f7] pb-36 lg:pb-0">
       <Header />
 
       <main id="main-content" className="flex-1">
@@ -71,11 +71,35 @@ export default function MenuPage() {
           </div>
         </section>
 
+        {/* Sticky/Horizontal Scroll Category Navigation on Mobile */}
+        <div className="md:hidden sticky top-[56px] z-40 bg-[#fcf8f7] border-b border-[rgba(94,95,91,0.1)] py-3 px-4 overflow-x-auto flex gap-3 whitespace-nowrap" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+          {menuCategories.map((category) => (
+            <button
+              key={category.title}
+              onClick={() => {
+                const element = document.getElementById(`category-${category.title.toLowerCase()}`);
+                if (element) {
+                  const headerOffset = 110; // Sticky header (56px) + category bar (54px)
+                  const elementPosition = element.getBoundingClientRect().top;
+                  const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                  window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                  });
+                }
+              }}
+              className="font-['Inter'] text-[#5e5f5b] text-xs font-semibold tracking-[1.2px] uppercase px-4 py-2 bg-[#f7f3f1] border border-[rgba(94,95,91,0.15)] rounded-full hover:border-[#c7a66a] hover:bg-white transition-all active:scale-95 cursor-pointer"
+            >
+              {category.title}
+            </button>
+          ))}
+        </div>
+
         {/* Menu Categories */}
         <section className="py-12 sm:py-16 lg:py-24">
           <div className="max-w-[1200px] mx-auto px-4 sm:px-8 lg:px-16 space-y-16 lg:space-y-24">
             {menuCategories.map((category, idx) => (
-              <div key={idx}>
+              <div key={idx} id={`category-${category.title.toLowerCase()}`}>
                 <div className="mb-8 sm:mb-12">
                   <h2 className="font-['EB_Garamond'] text-[#5e5f5b] text-2xl sm:text-3xl lg:text-[40px] mb-2">
                     {category.title}
@@ -117,13 +141,13 @@ export default function MenuPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/reservations"
-                className="px-8 py-3 bg-[#c7a66a] border border-[#9c7a3e] text-[#241c16] font-['Inter'] text-sm tracking-[1.2px] hover:bg-[#b89660] transition-colors text-center"
+                className="min-h-[48px] flex items-center justify-center px-8 bg-[#c7a66a] border border-[#9c7a3e] text-[#241c16] font-['Inter'] text-sm tracking-[1.2px] hover:bg-[#b89660] transition-colors text-center"
               >
                 Book a Table
               </Link>
               <Link
                 to="/order"
-                className="px-8 py-3 border border-[#a39d95] text-[#241c16] font-['Inter'] text-sm tracking-[1.2px] hover:bg-white transition-colors text-center"
+                className="min-h-[48px] flex items-center justify-center px-8 border border-[#a39d95] text-[#241c16] font-['Inter'] text-sm tracking-[1.2px] hover:bg-white transition-colors text-center"
               >
                 Order Online
               </Link>

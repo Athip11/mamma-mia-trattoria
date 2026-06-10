@@ -99,13 +99,13 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
                   to="/order"
-                  className="px-8 py-3 bg-[#c7a66a] border border-[#9c7a3e] text-white text-center font-['Inter'] text-xs tracking-[1.2px] transition-all duration-150 hover:bg-[#b89660] active:translate-y-px active:bg-[#9c7a3e]"
+                  className="w-full sm:w-auto min-h-[48px] flex items-center justify-center px-8 bg-[#c7a66a] border border-[#9c7a3e] text-white text-center font-['Inter'] text-xs tracking-[1.2px] transition-all duration-150 hover:bg-[#b89660] active:translate-y-px active:bg-[#9c7a3e]"
                 >
                   ORDER
                 </Link>
                 <Link
                   to="/reservations"
-                  className="px-8 py-3 border border-[#9c7a3e] text-[#5e5f5b] text-center font-['Inter'] text-xs tracking-[1.2px] transition-all duration-150 hover:bg-[#f7f1e7] active:translate-y-px active:bg-[#eadfcf]"
+                  className="w-full sm:w-auto min-h-[48px] flex items-center justify-center px-8 border border-[#9c7a3e] text-[#5e5f5b] text-center font-['Inter'] text-xs tracking-[1.2px] transition-all duration-150 hover:bg-[#f7f1e7] active:translate-y-px active:bg-[#eadfcf]"
                 >
                   TABLE RESERVE
                 </Link>
@@ -296,13 +296,13 @@ export default function HomePage() {
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link
                     to="/contact"
-                    className="px-8 py-3 bg-[#c7a66a] border border-[#9c7a3e] text-white text-center font-['Inter'] text-xs tracking-[1.2px] transition-all duration-150 hover:bg-[#b89660] active:translate-y-px active:bg-[#9c7a3e]"
+                    className="w-full sm:w-auto min-h-[48px] flex items-center justify-center px-8 bg-[#c7a66a] border border-[#9c7a3e] text-white text-center font-['Inter'] text-xs tracking-[1.2px] transition-all duration-150 hover:bg-[#b89660] active:translate-y-px active:bg-[#9c7a3e]"
                   >
                     CONTACT
                   </Link>
                   <Link
                     to="/reservations"
-                    className="px-8 py-3 border border-[#9c7a3e] text-[#5e5f5b] text-center font-['Inter'] text-xs tracking-[1.2px] transition-all duration-150 hover:bg-[#fcf8f7] active:translate-y-px active:bg-[#eadfcf]"
+                    className="w-full sm:w-auto min-h-[48px] flex items-center justify-center px-8 border border-[#9c7a3e] text-[#5e5f5b] text-center font-['Inter'] text-xs tracking-[1.2px] transition-all duration-150 hover:bg-[#fcf8f7] active:translate-y-px active:bg-[#eadfcf]"
                   >
                     RESERVE TABLE
                   </Link>

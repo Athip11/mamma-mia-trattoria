@@ -159,7 +159,7 @@ export default function OrderPage() {
                       <button
                         type="button"
                         onClick={() => addToCart(item)}
-                        className="w-full px-4 py-2 border border-[#c7a66a] text-[#5e5f5b] font-['Inter'] text-xs tracking-[1.2px] transition-all duration-150 hover:bg-[#c7a66a] hover:text-white active:translate-y-px active:bg-[#9c7a3e] active:border-[#9c7a3e] active:text-white"
+                        className="w-full min-h-[48px] flex items-center justify-center px-4 py-2 border border-[#c7a66a] text-[#5e5f5b] font-['Inter'] text-xs tracking-[1.2px] transition-all duration-150 hover:bg-[#c7a66a] hover:text-white active:translate-y-px active:bg-[#9c7a3e] active:border-[#9c7a3e] active:text-white"
                       >
                         Add to Table Order
                       </button>
@@ -225,7 +225,7 @@ export default function OrderPage() {
                             <button
                               type="button"
                               onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                              className="w-8 h-8 border border-[#c7a66a] text-[#5e5f5b] transition-all duration-150 hover:bg-[#f7f1e7] hover:border-[#9c7a3e] active:translate-y-px active:bg-[#c7a66a] active:text-white"
+                              className="w-12 h-12 flex items-center justify-center border border-[#c7a66a] text-[#5e5f5b] transition-all duration-150 hover:bg-[#f7f1e7] hover:border-[#9c7a3e] active:translate-y-px active:bg-[#c7a66a] active:text-white"
                               aria-label={`Remove one ${item.name}`}
                             >
                               -
@@ -236,7 +236,7 @@ export default function OrderPage() {
                             <button
                               type="button"
                               onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                              className="w-8 h-8 border border-[#c7a66a] text-[#5e5f5b] transition-all duration-150 hover:bg-[#f7f1e7] hover:border-[#9c7a3e] active:translate-y-px active:bg-[#c7a66a] active:text-white"
+                              className="w-12 h-12 flex items-center justify-center border border-[#c7a66a] text-[#5e5f5b] transition-all duration-150 hover:bg-[#f7f1e7] hover:border-[#9c7a3e] active:translate-y-px active:bg-[#c7a66a] active:text-white"
                               aria-label={`Add one ${item.name}`}
                             >
                               +
@@ -275,7 +275,7 @@ export default function OrderPage() {
                   <button
                     type="submit"
                     disabled={cart.length === 0}
-                    className="w-full px-8 py-3 bg-[#c7a66a] border border-[#9c7a3e] text-white font-['Inter'] text-sm tracking-[1.2px] transition-all duration-150 hover:bg-[#b89660] active:translate-y-px active:bg-[#9c7a3e] disabled:opacity-50 disabled:cursor-not-allowed disabled:active:translate-y-0"
+                    className="w-full min-h-[48px] flex items-center justify-center px-8 py-3 bg-[#c7a66a] border border-[#9c7a3e] text-white font-['Inter'] text-sm tracking-[1.2px] transition-all duration-150 hover:bg-[#b89660] active:translate-y-px active:bg-[#9c7a3e] disabled:opacity-50 disabled:cursor-not-allowed disabled:active:translate-y-0"
                   >
                     Send Order to Kitchen
                   </button>

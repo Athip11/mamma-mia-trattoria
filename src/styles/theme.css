@@ -226,7 +226,7 @@ footer h3[class*="EB_Garamond"] {
   gap: 8px;
   box-sizing: border-box;
   width: calc(100vw - 32px);
-  max-width: 360px;
+  max-width: 520px;
   margin: 0 auto;
   padding: 8px;
   border: 1px solid #9c7a3e;
