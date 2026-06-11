@@ -3,6 +3,7 @@ import Footer from '../components/Footer';
 import { Link } from 'react-router';
 import imgHero from '../../imports/HomeMammaMiaTrattoria/9bae9a898be91d7a0bf22582322fb268eacf77d4.png';
 import imgStory from '../../imports/HomeMammaMiaTrattoria/6cc354a59cb990d599d6a50ef351edee6ca4002c.png';
+import imgTableUpdates from '../../imports/BlogGenerated/mamma-mia-updates.png';
 
 const primaryLinks = [
   {
@@ -51,18 +52,58 @@ const featuredDishes = [
   },
 ];
 
-const reviews = [
+type Review = {
+  id: string;
+  author: string;
+  rating: number;
+  quote: string;
+};
+
+const reviews: Review[] = [
   {
+    id: 'review-1',
     quote: 'Warm room. Proper wood-fired edges.',
     author: 'Local guest',
+    rating: 5,
   },
   {
+    id: 'review-2',
     quote: 'Easy ordering. Pasta with care.',
     author: 'Family dinner',
+    rating: 5,
   },
   {
+    id: 'review-3',
     quote: 'Built for birthdays and Sunday lunches.',
     author: 'Regular table',
+    rating: 4,
+  },
+];
+
+const tableUpdates = [
+  {
+    category: 'FAMILY SPECIAL',
+    date: 'JUN 16',
+    title: 'Sunday Family Lunch',
+    excerpt: 'Share lasagna, wood-fired pizza, salad, and tiramisu for the whole table.',
+    action: 'RESERVE TABLE',
+    to: '/reservations',
+  },
+  {
+    category: 'SEASONAL DISH',
+    date: 'JUN 19',
+    title: 'Fresh Basil Pesto Week',
+    excerpt: 'Handmade pasta tossed with basil pesto, toasted pine nuts, and pecorino.',
+    action: 'VIEW MENU',
+    to: '/menu',
+  },
+  {
+    category: 'EVENT',
+    date: 'JUN 22',
+    title: 'Aperitivo Evening',
+    excerpt: 'Small plates, spritzes, and relaxed Italian hours every Thursday evening.',
+    action: 'PLAN VISIT',
+    to: '/contact',
   },
 ];
 
@@ -72,6 +113,9 @@ const visitDetails = [
   ['LOCATION', '78 Oakwood Drive'],
   ['GROUPS', 'Family tables welcome'],
 ];
+
+const mapUrl = 'https://www.openstreetmap.org/export/embed.html?bbox=-73.9937%2C40.7214%2C-73.9820%2C40.7294&layer=mapnik&marker=40.7254%2C-73.9878';
+const directionsUrl = 'https://www.google.com/maps/search/?api=1&query=78%20Oakwood%20Drive';
 
 export default function HomePage() {
   return (
@@ -239,6 +283,77 @@ export default function HomePage() {
           </div>
         </section>
 
+        <section className="bg-[#fcf8f7] border-y border-[rgba(94,95,91,0.1)] py-12 sm:py-16 lg:py-24">
+          <div className="max-w-[1200px] mx-auto px-4 sm:px-8 lg:px-16">
+            <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10">
+              <div className="max-w-[680px]">
+                <p className="font-['Inter'] text-[#9c7a3e] text-xs tracking-[2.4px] uppercase mb-4">
+                  BLOG
+                </p>
+                <h2 className="font-['EB_Garamond'] text-[#5e5f5b] text-3xl lg:text-[44px] leading-tight">
+                  From our table.
+                </h2>
+              </div>
+              <p className="font-['EB_Garamond'] text-[#464742] text-base sm:text-lg leading-relaxed max-w-[420px]">
+                Family specials, seasonal plates, and small moments from the trattoria.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-12 border border-[#e5e2e0]">
+              <article className="lg:col-span-7 bg-[#f7f3f1] border-b lg:border-b-0 lg:border-r border-[#e5e2e0]">
+                <div className="h-[260px] sm:h-[380px] overflow-hidden border-b border-[#e5e2e0]">
+                  <img
+                    src={imgTableUpdates}
+                    alt="Italian pasta, pizza, basil, and olive oil on a trattoria table"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div className="p-6 sm:p-8">
+                  <p className="font-['Inter'] text-[#9c7a3e] text-[11px] tracking-[1.2px] uppercase mb-4">
+                    {tableUpdates[0].category} / {tableUpdates[0].date}
+                  </p>
+                  <h3 className="font-['EB_Garamond'] text-[#5e5f5b] text-3xl leading-tight mb-4">
+                    {tableUpdates[0].title}
+                  </h3>
+                  <p className="font-['EB_Garamond'] text-[#464742] text-base sm:text-lg leading-relaxed mb-6">
+                    {tableUpdates[0].excerpt}
+                  </p>
+                  <Link
+                    to={tableUpdates[0].to}
+                    className="inline-flex font-['Inter'] text-[#5e5f5b] text-xs tracking-[1.2px] border-b border-[#c7a66a] pb-1 transition-colors hover:text-[#9c7a3e]"
+                  >
+                    {tableUpdates[0].action}
+                  </Link>
+                </div>
+              </article>
+
+              <div className="lg:col-span-5 grid grid-cols-1">
+                {tableUpdates.slice(1).map((update) => (
+                  <article key={update.title} className="bg-[#fcf8f7] p-6 sm:p-8 border-b border-[#e5e2e0] last:border-b-0">
+                    <p className="font-['Inter'] text-[#9c7a3e] text-[11px] tracking-[1.2px] uppercase mb-4">
+                      {update.category} / {update.date}
+                    </p>
+                    <h3 className="font-['EB_Garamond'] text-[#5e5f5b] text-2xl mb-3">
+                      {update.title}
+                    </h3>
+                    <p className="font-['EB_Garamond'] text-[#67645c] text-sm sm:text-base leading-relaxed mb-6">
+                      {update.excerpt}
+                    </p>
+                    <Link
+                      to={update.to}
+                      className="inline-flex font-['Inter'] text-[#5e5f5b] text-xs tracking-[1.2px] border-b border-[#c7a66a] pb-1 transition-colors hover:text-[#9c7a3e]"
+                    >
+                      {update.action}
+                    </Link>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="bg-[#f7f3f1] border-y border-[rgba(94,95,91,0.1)] py-12 sm:py-16 lg:py-24">
           <div className="max-w-[1200px] mx-auto px-4 sm:px-8 lg:px-16">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -255,7 +370,10 @@ export default function HomePage() {
               </div>
               <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 border border-[#e5e2e0] bg-[#fcf8f7]">
                 {reviews.map((review) => (
-                  <div key={review.author} className="p-6 border-b md:border-b-0 md:border-r border-[#e5e2e0] last:border-b-0 md:last:border-r-0">
+                  <div key={review.id} className="p-6 border-b md:border-b-0 md:border-r border-[#e5e2e0] last:border-b-0 md:last:border-r-0">
+                    <p className="font-['Inter'] text-[#9c7a3e] text-[12px] tracking-[2px]" aria-label={`${review.rating} out of 5 stars`}>
+                      {'★'.repeat(review.rating)}{'☆'.repeat(5 - review.rating)}
+                    </p>
                     <p className="font-['EB_Garamond'] text-[#464742] text-base leading-relaxed mb-5">
                       "{review.quote}"
                     </p>
@@ -266,6 +384,7 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
+
           </div>
         </section>
 
@@ -294,12 +413,20 @@ export default function HomePage() {
                   Directions, questions, table details.
                 </h2>
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <Link
-                    to="/contact"
+                  <a
+                    href="tel:5551234567"
                     className="w-full sm:w-auto min-h-[48px] flex items-center justify-center px-8 bg-[#c7a66a] border border-[#9c7a3e] text-white text-center font-['Inter'] text-xs tracking-[1.2px] transition-all duration-150 hover:bg-[#b89660] active:translate-y-px active:bg-[#9c7a3e]"
                   >
-                    CONTACT
-                  </Link>
+                    CALL
+                  </a>
+                  <a
+                    href={directionsUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-full sm:w-auto min-h-[48px] flex items-center justify-center px-8 border border-[#9c7a3e] text-[#5e5f5b] text-center font-['Inter'] text-xs tracking-[1.2px] transition-all duration-150 hover:bg-[#fcf8f7] active:translate-y-px active:bg-[#eadfcf]"
+                  >
+                    OPEN MAPS
+                  </a>
                   <Link
                     to="/reservations"
                     className="w-full sm:w-auto min-h-[48px] flex items-center justify-center px-8 border border-[#9c7a3e] text-[#5e5f5b] text-center font-['Inter'] text-xs tracking-[1.2px] transition-all duration-150 hover:bg-[#fcf8f7] active:translate-y-px active:bg-[#eadfcf]"
@@ -308,6 +435,15 @@ export default function HomePage() {
                   </Link>
                 </div>
               </div>
+            </div>
+            <div className="border-x border-b border-[#e5e2e0] bg-[#f7f1e7] p-2 sm:p-3">
+              <iframe
+                title="Map to Mamma Mia Trattoria"
+                src={mapUrl}
+                className="h-[320px] w-full border-0 grayscale-[15%] contrast-[95%] sm:h-[420px]"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
         </section>
