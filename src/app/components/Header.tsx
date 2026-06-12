@@ -1,9 +1,14 @@
 import { Link, useLocation } from 'react-router';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Header() {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.getElementById('root')?.scrollTo(0, 0);
+  }, [location.pathname]);
 
   const isActive = (path: string) => location.pathname === path;
   const mobileActionClass = (path?: string) =>
@@ -122,18 +127,21 @@ export default function Header() {
         </div>
       </header>
 
-      {location.pathname !== '/reservations' && (
-        <nav className="mamma-mobile-cta-bar lg:hidden" aria-label="Quick actions">
-          <div className="mamma-mobile-cta-panel">
-            <a href="tel:5551234567" className={`${mobileActionClass()} is-call`}>
-              <span>CALL</span>
-            </a>
-            <Link to="/reservations" className={`${mobileActionClass('/reservations')} is-reserve`}>
-              <span>RESERVE</span>
+      <nav className="mamma-mobile-cta-bar lg:hidden" aria-label="Quick actions">
+        <div className="mamma-mobile-cta-panel">
+          {ctaLinks.map((link) => (
+            <Link
+              key={link.path}
+              to={link.path}
+              onClick={() => setMobileMenuOpen(false)}
+              className={mobileActionClass(link.path)}
+              aria-current={isActive(link.path) ? 'page' : undefined}
+            >
+              <span>{link.label}</span>
             </Link>
-          </div>
-        </nav>
-      )}
+          ))}
+        </div>
+      </nav>
     </>
   );
 }
